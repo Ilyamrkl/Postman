@@ -2,12 +2,14 @@
 
 # Создать запросы в Postman.
 
- _Protocol: http 
- _IP: 162.55.220.72
+ _Protocol: http_
+ 
+ _IP: 162.55.220.72_
+ 
  _Port: 5007_
 
 
-в поле ввода `URL` ввожу http://162.55.220.72:5007/ и нажимаю Save
+__в поле ввода `URL` ввожу http://162.55.220.72:5007/ и нажимаю Save__
 
 
  # Method: GET
@@ -15,13 +17,13 @@
  # EP_1
  
  
- EndPoint: /get_method
+ _EndPoint: /get_method_
  
- request url params: 
+ _request url params:_ 
  
- name: str
+ _name: str_
  
- age: int
+ _age: int_
 
 
 1. Создаю новый request `команда "Add Request"`
@@ -31,7 +33,7 @@
 5. В строках " KEY and Value " ввожу нужные значения 
 6. Нажимаю `SEND`
 
-response:: 
+_response:_ 
 
 [
 
@@ -44,15 +46,15 @@ response::
 
 # EP_2
 
-EndPoint: /user_info_3
+_EndPoint: /user_info_3_
 
-request form data:
+_request form data:_
 
-name: str
+_name: str_
 
-age: int
+_age: int_
 
-salary: int
+_salary: int_
 
 
 1. Создаю новый request `команда "Add Request"`
@@ -66,15 +68,15 @@ salary: int
 
 # EP_3
 
-EndPoint: /object_info_1
+_EndPoint: /object_info_1_
 
-request url params: 
+_request url params:_ 
 
-name: str
+_name: str_
 
-age: int
+_age: int_
 
-weight: int
+_weight: int_
 
 
 1. Создаю новый request `команда "Add Request"`
@@ -84,6 +86,6 @@ weight: int
 5. В строках " KEY, Value, Weigt " ввожу нужные значения 
 6. Нажимаю `SEND`
 
-response:
-ответ
+_response:_
+
 
