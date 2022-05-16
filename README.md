@@ -14,10 +14,15 @@ Port: 5007
  # EP_1
  
  Method: GET
+ 
  EndPoint: /get_method
+ 
  request url params: 
+ 
  name: str
+ 
  age: int
+
 
 1. Создаю новый request `команда "Add Request"`
 2. Выбираю `method get`
