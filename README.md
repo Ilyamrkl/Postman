@@ -173,11 +173,16 @@ _response:_
 # Method: POST
 
 # EP_7
-EndPoint: /user_info_2
-request form data: 
- name: str
- age: int
- salary: int
+
+_EndPoint: /user_info_2_
+
+_request form data:_ 
+
+ _name: str_
+ 
+ _age: int_
+ 
+ _salary: int_
 
 1. Создаю новый request `команда "Add Request"`
 2. Выбираю метод `Post`
