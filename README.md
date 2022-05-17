@@ -151,6 +151,7 @@ _response:_
 {
    
    "person": {
+   
         "u_age": 23,
         "u_name": [
             "Ilya",
@@ -165,6 +166,7 @@ _response:_
     "qa_salary_after_6_months": 200,
     "start_qa_salary": 100
     
+   
 }
 
 ---------------------------------------------------------------------------------------------------------------
@@ -192,6 +194,35 @@ _request url params:_
 
 _response:_
 
+{
+    "age": "23",
+    "family": {
+        "children": [
+            [
+                "Alex",
+                24
+            ],
+            [
+                "Kate",
+                12
+            ]
+        ],
+        "pets": {
+            "cat": {
+                "age": 3,
+                "name": "Sunny"
+            },
+            "dog": {
+                "age": 4,
+                "name": "Luky"
+            }
+        },
+        "u_salary_1_5_year": 400
+    },
+    "name": "Ilya",
+    "salary": 100
+}
+
 ---------------------------------------------------------------------------------------------------------------
 
 # Method: GET
@@ -217,6 +248,16 @@ _request url params:_
 
 _response:_
 
+{
+    "age": 23,
+    "name": "Ilya",
+    "salary": [
+        100,
+        "200",
+        "300"
+    ]
+}
+
 ---------------------------------------------------------------------------------------------------------------
 
 # Method: POST
@@ -241,3 +282,20 @@ _request form data:_
 6. Нажимаю `SEND`
 
 _response:_
+
+{
+    "person": {
+        "u_age": 23,
+        "u_name": [
+            "Ilya",
+            20000,
+            23
+        ],
+        "u_salary_5_years": 84000.0
+    },
+    "qa_salary_after_1.5_year": 66000.0,
+    "qa_salary_after_12_months": 54000.0,
+    "qa_salary_after_3.5_years": 76000.0,
+    "qa_salary_after_6_months": 40000,
+    "start_qa_salary": 20000
+}
