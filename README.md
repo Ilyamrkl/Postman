@@ -195,13 +195,19 @@ _request url params:_
 _response:_
 
 {
-    "age": "23",
-    "family": {"children": [["Alex", 24], ["Kate", 12]],
+   
+   "age": "23",
+   
+   "family": 
+   
+    {"children": [["Alex", 24], ["Kate", 12]],
+    
                "pets": {"cat": {"age": 3, "name": "Sunny"},
+               
                         "dog": {"age": 4, "name": "Luky"}},
-               "u_salary_1_5_year": 40000},
-    "name": "Ilya",
-    "salary": 10000
+                        
+               "u_salary_1_5_year": 40000},"name": "Ilya", "salary": 10000
+               
 }
 
 ---------------------------------------------------------------------------------------------------------------
