@@ -42,6 +42,8 @@ __response:__
 
 3. Спарсить response body в json.
 
+_перехожу в  `Snippets ➡️  Response body: JSON value check`_
+
 
 5. Проверить, что name в ответе равно name s request (name вбить руками.)
 6. Проверить, что age в ответе равно age s request (age вбить руками.)
