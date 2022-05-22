@@ -44,11 +44,39 @@ __response:__
 
 _перехожу в  `Snippets ➡️  Response body: JSON value check`_
 
+  `оставляю код:`
+  
+    let responseData = pm.response.json(); 
+    
+    pm.test("Your test name", function () {
+    
+    console.log(responseData);
+    
 
 5. Проверить, что name в ответе равно name s request (name вбить руками.)
 
+ `оставляю код:`
+
+    pm.test("name в запросе равен name в ответе", function () {
+    
+    pm.expect(responseData.name).to.eql("Ilya");
+    
+    
+  __response:__
+ 
+    PASS name в запросе равен name в ответе
 
 6. Проверить, что age в ответе равно age s request (age вбить руками.)
+
+`оставляю код:`
+
+    pm.test("age в запросе равен age в ответе", function () {
+    
+    pm.expect(responseData.age).to.eql("23");
+    
+ __response:__
+    
+    PASS age в запросе равен age в ответе 
 
 
 7. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
