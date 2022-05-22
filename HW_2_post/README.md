@@ -46,14 +46,18 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
 
 
 5. Проверить, что name в ответе равно name s request (name вбить руками.)
+
+
 6. Проверить, что age в ответе равно age s request (age вбить руками.)
+
+
 7. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
-8. Спарсить request.
-9. Проверить, что name в ответе равно name s request (name забрать из request.)
-10. Проверить, что age в ответе равно age s request (age забрать из request.)
-11. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
-12. Вывести в консоль параметр family из response.
-13. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+10. Спарсить request.
+11. Проверить, что name в ответе равно name s request (name забрать из request.)
+12. Проверить, что age в ответе равно age s request (age забрать из request.)
+13. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+14. Вывести в консоль параметр family из response.
+15. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
 
 http://162.55.220.72:5005/object_info_3
 1. Отправить запрос.
