@@ -51,7 +51,7 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
     console.log(responseData);
     
 
-5. Проверить, что name в ответе равно name s request (name вбить руками.)
+4. Проверить, что name в ответе равно name s request (name вбить руками.)
 
  `оставляю код:`
 
@@ -63,7 +63,7 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
  
     PASS name в запросе равен name в ответе
 
-6. Проверить, что age в ответе равно age s request (age вбить руками.)
+5. Проверить, что age в ответе равно age s request (age вбить руками.)
 
 `оставляю код:`
 
@@ -75,7 +75,7 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
     PASS age в запросе равен age в ответе 
 
 
-7. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
+6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
  
 `оставляю код:`
 
@@ -86,7 +86,7 @@ __response:__
 
     PASS salary в запросе равен salary в ответе
     
-8. Спарсить request.
+7. Спарсить request.
 
 `оставляю код:`
 
@@ -95,15 +95,66 @@ __response:__
      
  __response:__
    
-   `Console:`  request data:{age: "23", name: "Ilya", salary: "20000"}
+`Console:`  
+      
+     request data:{age: "23", name: "Ilya", salary: "20000"}
      
-11. Проверить, что name в ответе равно name s request (name забрать из request.)
-12. Проверить, что age в ответе равно age s request (age забрать из request.)
-13. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
-14. Вывести в консоль параметр family из response.
-15. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+8. Проверить, что name в ответе равно name s request (name забрать из request.)
 
-http://162.55.220.72:5005/object_info_3
+`оставляю код:`
+
+      pm.test("значения name в ответе и в запросе совпадают", function () {
+      pm.expect(responseData.name).to.eql(requestData.name);});
+      
+ __response:__  
+ 
+     PASSзначения name в ответе и в запросе совпадают
+     
+9. Проверить, что age в ответе равно age s request (age забрать из request.)
+
+`оставляю код:`
+
+     pm.test("значения age в ответе и в запросе совпадают", function () {
+     pm.expect(responseData.age).to.eql(requestData.age);  
+     });
+
+ __response:__  
+ 
+    PASS значения age в ответе и в запросе совпадают
+    
+10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+
+`оставляю код:`
+
+     pm.test("значения salary в ответе и в запросе совпадают", function () {
+     pm.expect(responseData.salary).to.eql(Number(requestData.salary));  
+     });
+
+ __response:__
+ 
+   PASS значения salary в ответе и в запросе совпадают
+
+11. Вывести в консоль параметр family из response.
+
+    console.log('Family: ', responseDate.family)
+    
+ __response:__
+ 
+  `Console:`  
+  
+12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+
+`оставляю код:`
+     pm.test("u_salary_1_5_year в ответе равно salary*4", function () {  
+     pm.expect(responseData.family.u_salary_1_5_year).to.eql(+requestData.salary*4);   
+     });
+ __response:__  
+ 
+       PASS u_salary_1_5_year в ответе равно salary*4
+       
+       
+# http://162.55.220.72:5005/object_info_3
+
 1. Отправить запрос.
 2. Статус код 200
 3. Спарсить response body в json.
