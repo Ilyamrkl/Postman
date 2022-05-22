@@ -47,9 +47,7 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
   `оставляю код:`
   
     let responseData = pm.response.json(); 
-    
     pm.test("Your test name", function () {
-    
     console.log(responseData);
     
 
@@ -58,7 +56,6 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
  `оставляю код:`
 
     pm.test("name в запросе равен name в ответе", function () {
-    
     pm.expect(responseData.name).to.eql("Ilya");
     
     
@@ -71,7 +68,6 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
 `оставляю код:`
 
     pm.test("age в запросе равен age в ответе", function () {
-    
     pm.expect(responseData.age).to.eql("23");
     
  __response:__
@@ -80,7 +76,27 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
 
 
 7. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
-10. Спарсить request.
+ 
+`оставляю код:`
+
+    pm.test("salary в запросе равен salary в ответе", function () {
+    pm.expect(responseData.salary).to.eql(20000);});
+    
+__response:__
+
+    PASS salary в запросе равен salary в ответе
+    
+8. Спарсить request.
+
+`оставляю код:`
+
+     let requestData = request.data;  
+     console.log('request data:', requestData);
+     
+ __response:__
+   
+   `Console:`  request data:{age: "23", name: "Ilya", salary: "20000"}
+     
 11. Проверить, что name в ответе равно name s request (name забрать из request.)
 12. Проверить, что age в ответе равно age s request (age забрать из request.)
 13. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
