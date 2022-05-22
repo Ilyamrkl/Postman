@@ -136,6 +136,8 @@ __response:__
 
 11. Вывести в консоль параметр family из response.
 
+`Console:`  
+
     console.log('Family: ', responseDate.family)
     
  __response:__
@@ -145,9 +147,11 @@ __response:__
 12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
 
 `оставляю код:`
+
      pm.test("u_salary_1_5_year в ответе равно salary*4", function () {  
      pm.expect(responseData.family.u_salary_1_5_year).to.eql(+requestData.salary*4);   
      });
+     
  __response:__  
  
        PASS u_salary_1_5_year в ответе равно salary*4
