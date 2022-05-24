@@ -160,12 +160,42 @@ __response:__
 # http://162.55.220.72:5005/object_info_3
 
 1. Отправить запрос.
+
+ввожу в поле ввода `"URL"`  `http://162.55.220.72:5005/user_info_3` , далее кнопка `Send`_
+
 2. Статус код 200
+
+_перехожу `Tests ➡️  Status Code is 200 ➡️  Sand  ➡️  Test Results`_
+
+__response:__
+
+    Status code is 200
+
 3. Спарсить response body в json.
+
+_перехожу в  `Snippets ➡️  Response body: JSON value check`_
+
+  `оставляю код:`
+  
+   let responseData = pm.response.json();
+   console.log('Response Data:', responseData)
+  
+`Console:`
+
+   {age: "23", family: {…}, name: "Ilya"…}
+    
 4. Спарсить request.
-5. Проверить, что name в ответе равно name s request (name забрать из request.)
-6. Проверить, что age в ответе равно age s request (age забрать из request.)
-7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+
+let requestData = pm.request.url.query.toObject()  
+console.log('Request Data:', requestData);
+
+`Console:`  
+
+    {age: "23", name: "Ilya", salary: "10000"}
+
+6. Проверить, что name в ответе равно name s request (name забрать из request.)
+7. Проверить, что age в ответе равно age s request (age забрать из request.)
+8. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
 
  __response:__  
  
@@ -197,3 +227,26 @@ http://162.55.220.72:5005/object_info_4
 19. Передать в окружение переменную age
 20. Передать в окружение переменную salary
 21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
+
+1. Вставить параметр salary из окружения в request
+2. Вставить параметр age из окружения в age
+3. Вставить параметр name из окружения в name
+4. Отправить запрос.
+5. Статус код 200
+6. Спарсить response body в json.
+7. Спарсить request.
+8. Проверить, что json response имеет параметр start_qa_salary
+9. Проверить, что json response имеет параметр qa_salary_after_6_months
+10. Проверить, что json response имеет параметр qa_salary_after_12_months
+11. Проверить, что json response имеет параметр qa_salary_after_1.5_year
+12. Проверить, что json response имеет параметр qa_salary_after_3.5_years
+13. Проверить, что json response имеет параметр person
+14. Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request.)
+15. Проверить, что параметр qa_salary_after_6_months равен salary*2 из request (salary забрать из request.)
+16. Проверить, что параметр qa_salary_after_12_months равен salary*2.7 из request (salary забрать из request.)
+17. Проверить, что параметр qa_salary_after_1.5_year равен salary*3.3 из request (salary забрать из request.)
+18. Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.)
+19. Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.)
+20. Проверить, что что параметр u_age равен age из request (age забрать из request.)
+21. Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.)
+22. ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
