@@ -175,10 +175,10 @@ __response:__
 
 _перехожу в  `Snippets ➡️  Response body: JSON value check`_
 
-  `оставляю код:`
+`оставляю код:`
   
-   let responseData = pm.response.json();
-   console.log('Response Data:', responseData)
+    let responseData = pm.response.json();
+    console.log('Response Data:', responseData)
   
 `Console:`
 
@@ -186,8 +186,8 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
     
 4. Спарсить request.
 
-let requestData = pm.request.url.query.toObject()  
-console.log('Request Data:', requestData);
+    let requestData = pm.request.url.query.toObject()  
+    console.log('Request Data:', requestData);
 
 `Console:`  
 
