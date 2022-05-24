@@ -182,7 +182,7 @@ _перехожу в  `Snippets ➡️  Response body: JSON value check`_
   
 `Console:`
 
-   {age: "23", family: {…}, name: "Ilya"…}
+    {age: "23", family: {…}, name: "Ilya"…}
     
 4. Спарсить request.
 
