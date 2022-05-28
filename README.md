@@ -262,6 +262,7 @@ _request form data:_
  _age: int_
  
  _salary: int_
+11
 
 1. Создаю новый request `команда "Add Request"`
 2. Выбираю метод `Post`
